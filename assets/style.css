@@ -29,9 +29,13 @@ textarea{
   text-align: center;
   border-radius: 15px;
   margin: 0;
-  background-color: #adadad;
   padding: 1.5%;
 }
+
+.hour-block {
+  /* background-color: black; */
+}
+
 
 .row {
   white-space: pre-wrap;
