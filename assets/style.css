@@ -25,9 +25,12 @@ textarea{
   white-space: pre-wrap;
 }
 
-.time-block{
+.event-box{
   text-align: center;
   border-radius: 15px;
+  margin: 0;
+  background-color: #adadad;
+  padding: 1.5%;
 }
 
 .row {
@@ -40,10 +43,6 @@ textarea{
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
-}
-
-.hours {
-  line-height: 15%;
 }
 
 
