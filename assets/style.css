@@ -28,18 +28,16 @@ textarea{
 .event-box{
   text-align: center;
   border-radius: 15px;
-  margin: 0;
   padding: 1.5%;
 }
 
-.hour-block {
-  /* background-color: black; */
+.event-text {
+  margin: 0
 }
 
 
 .row {
   white-space: pre-wrap;
-  height: 55px;
   border-top: 1px solid white;;
 }
 

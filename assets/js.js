@@ -1,14 +1,13 @@
 // Function that allows the event box to be edited
 $(".event-box").on("click", function() {
-var text = $(this)
-    .text()
-    .trim();
-    console.log(text);
+    // var text = $(this)
+    //     .text()
+    //     .trim();
+        // console.log(text);
 
-var textInput = $("<textarea>")
-    .addClass("col-9 event-box row")
-    $(this).replaceWith(textInput);
-    textInput.trigger("focus");
+    var textInput = $("<textarea>")
+        $(".event-text").replaceWith(textInput);
+        textInput.trigger("focus");
 });
 
 // Function finds current time and displays it in the header
@@ -25,18 +24,20 @@ var hoursUpdater = function () {
     var currentHour = moment().hours();
     $('.event-box').each(function () {
         var hourNum = parseInt($(this).attr("hour-num"))
+// console.log(hourNum)
+        if (hourNum == currentHour) {
+            $(this).addClass("present");
+        }
 
-        if (hourNum < currentHour) {
+        else if (hourNum < currentHour) {
             $(this).addClass("past");
         }
 
-        else if (hourNum > currentHour) {
+        else  {
             $(this).addClass("future");
         }
 
-        else {
-            $(this).addClass("present");
-        }
+
 
     })
 }
