@@ -1,6 +1,6 @@
 # CC's Day Planner
 
-Horiseon would like to share with you their competitive web experience they have been working on. As well as what they can provide for you!
+CC would like to help the user keep their day organized and on track. They offer this 24 hour work day schedule to help keep the user in sight of their goals!
 
 ## CC's Day Planner Offers:
 
@@ -8,20 +8,20 @@ Horiseon would like to share with you their competitive web experience they have
 
 * Event Editability
 
-* Saved Events Persits
+* Saved Events Persit
 
-* Past, Present, and Future Events are Color Coded
+* Past, Present, & Future Events Are Color Coded
 
 ## CC's Day Planner Benefits:
 
-* Easily plan out your day to keep it productive and on schedule
+* Easily plan out your 24 hour day to keep it productive and on schedule.
 
 ## Preview
 
 The following image demonstrates the web application's default appearance and functionality:
 
-![Screenshot of live URL](./assets/jpg)
+![Screenshot of live URL](./assets/default-webview.jpg)
 
 ## 📝 Live URL
 
-* [CC's Day Planner](https:///)
+* [CC's Day Planner](https://kcaseychamberlain.github.io/cc-day-planner/)

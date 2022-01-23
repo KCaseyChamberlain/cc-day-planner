@@ -1,14 +1,14 @@
 $(document).ready(function () {
     var schedule = ""
 
-    // Gets current time to display on web page
+    // gets the current time and displays it in the header
     var currentTime = function () {
         timeEL = document.querySelector('#currentDay')
         timeEL.innerHTML = moment().format('MMMM Do YYYY, hh:mm');
     }
     setInterval(currentTime, 1000);
 
-    //Updates rows to appropriate colors when time is reached
+    //styles hour-block according to the hour of the day
     var hourUpdater = function () {
         var currentHour = moment().hours();
         $('.hour-block').each(function () {
@@ -20,18 +20,16 @@ $(document).ready(function () {
 
             else if (hourBlock > currentHour) {
                 $(this).addClass("future");
-
             }
 
             else {
                 $(this).addClass("present");
             }
-
         })
     }
     setInterval(hourUpdater, 100)
 
-    //saves schedule items to local storage as object with hour and task key values
+    //sets schedule items to local storage as hour and task keys
     function saveSchedule() {
         schedule = []
         $('.description').each(function () {
@@ -47,7 +45,7 @@ $(document).ready(function () {
         })
     }
 
-    //retrieves schedule items from local storage
+    //gets schedule items from local storage
     function loadSchedule() {
         i = 0
         $('.description').each(function () {
@@ -64,10 +62,10 @@ $(document).ready(function () {
         })
     }
 
-
+    // save button click function calls
     $(".saveBtn").click(saveSchedule)
     hourUpdater()
     loadSchedule()
 
-    console.log("executed")
+    console.log("this document ready function ran start to finish!")
 });

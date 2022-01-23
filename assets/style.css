@@ -10,8 +10,7 @@ textarea{
   resize: none;
   font-size: x-large;
   padding: 1%;
-  line-height: 160%;
-  width: 100%;
+  line-height: 150%;
 }
 
 .jumbotron {
@@ -20,10 +19,6 @@ textarea{
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
-}
-
-.description{
-  white-space: pre-wrap;
 }
 
 .event-box{
@@ -68,6 +63,12 @@ textarea{
   color: white;
 }
 
+/* gives 12am hour-block some breathing room */
+#hour-24 {
+  margin-bottom: 50px;
+}
+
+/* hover */
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
