@@ -8,9 +8,10 @@ textarea{
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
+  font-size: x-large;
+  padding: 1%;
+  line-height: 160%;
+  width: 100%;
 }
 
 .jumbotron {
@@ -28,13 +29,8 @@ textarea{
 .event-box{
   text-align: center;
   border-radius: 15px;
-  padding: 1.5%;
+  padding: 1%;
 }
-
-.event-text {
-  margin: 0
-}
-
 
 .row {
   white-space: pre-wrap;
@@ -45,8 +41,9 @@ textarea{
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  font-size: larger;
+  font-weight: bolder;
 }
-
 
 .past {
   background-color: #d3d3d3;

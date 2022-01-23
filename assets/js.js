@@ -1,48 +1,73 @@
-// Function that allows the event box to be edited
-$(".event-box").on("click", function() {
-    // var text = $(this)
-    //     .text()
-    //     .trim();
-        // console.log(text);
+$(document).ready(function () {
+    var schedule = ""
 
-    var textInput = $("<textarea>")
-        $(".event-text").replaceWith(textInput);
-        textInput.trigger("focus");
+    // Gets current time to display on web page
+    var currentTime = function () {
+        timeEL = document.querySelector('#currentDay')
+        timeEL.innerHTML = moment().format('MMMM Do YYYY, hh:mm');
+    }
+    setInterval(currentTime, 1000);
+
+    //Updates rows to appropriate colors when time is reached
+    var hourUpdater = function () {
+        var currentHour = moment().hours();
+        $('.hour-block').each(function () {
+            var hourBlock = parseInt($(this).attr("hour-data"))
+
+            if (hourBlock < currentHour) {
+                $(this).addClass("past");
+            }
+
+            else if (hourBlock > currentHour) {
+                $(this).addClass("future");
+
+            }
+
+            else {
+                $(this).addClass("present");
+            }
+
+        })
+    }
+    setInterval(hourUpdater, 100)
+
+    //saves schedule items to local storage as object with hour and task key values
+    function saveSchedule() {
+        schedule = []
+        $('.description').each(function () {
+            var hour = $(this).attr("data-task")
+            var task = $.trim($(this).val())
+
+            schedule.push({
+                hour: hour,
+                task: task,
+            })
+
+            var setSchedule = localStorage.setItem('scheduleItems', JSON.stringify(schedule))
+        })
+    }
+
+    //retrieves schedule items from local storage
+    function loadSchedule() {
+        i = 0
+        $('.description').each(function () {
+            var readSchedule = JSON.parse(localStorage.getItem('scheduleItems'))
+            var hour = $(this).attr("data-task")
+
+            if (readSchedule[i].hour === hour) {
+                $(this).val(readSchedule[i].task)
+            }
+            else {
+                return ""
+            }
+            i++
+        })
+    }
+
+
+    $(".saveBtn").click(saveSchedule)
+    hourUpdater()
+    loadSchedule()
+
+    console.log("executed")
 });
-
-// Function finds current time and displays it in the header
-var currentTime = function () {
-    timeEL = document.querySelector('#currentDay')
-    timeEL.innerHTML = moment().format('MMMM Do YYYY, hh:mm');
-    // console.log(timeEL)
-}
-setInterval(currentTime, 1000);
-
-
-// Function compares the current hour to the event's set hour-num and applies 1/3 styles accordingly
-var hoursUpdater = function () {
-    var currentHour = moment().hours();
-    $('.event-box').each(function () {
-        var hourNum = parseInt($(this).attr("hour-num"))
-// console.log(hourNum)
-        if (hourNum == currentHour) {
-            $(this).addClass("present");
-        }
-
-        else if (hourNum < currentHour) {
-            $(this).addClass("past");
-        }
-
-        else  {
-            $(this).addClass("future");
-        }
-
-
-
-    })
-}
-setInterval(hoursUpdater, 100)
-
-
-
-

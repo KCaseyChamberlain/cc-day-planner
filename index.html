@@ -16,206 +16,154 @@
 <body>
   <header class="jumbotron">
     <h1 class="display-3">Work Day Scheduler</h1>
-    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p class="lead">A simple day planner for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
   </header>
 
   <div class="container">
-    <!-- 24 hour blocks start here -->
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">1AM</h3>
-      <div class="col-9 event-box" hour-num="1">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-1" hour-data="1" class="row hour-block">
+      <div class="col-md-1 hour">1AM</div>
+      <textarea data-task="1" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">2AM</h3>
-      <div class="col-9 event-box" hour-num="2">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-2" data-hour="2" class="row hour-block">
+      <div class="col-md-1 hour">2AM</div>
+      <textarea data-task="2" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">3AM</h3>
-      <div class="col-9 event-box" hour-num="3">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-3" hour-data="3" class="row hour-block">
+      <div class="col-md-1 hour">3AM</div>
+      <textarea data-task="3" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">4AM</h3>
-      <div class="col-9 event-box" hour-num="4">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-4" hour-data="4" class="row hour-block">
+      <div class="col-md-1 hour">4AM</div>
+      <textarea data-task="4" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">5AM</h3>
-      <div class="col-9 event-box" hour-num="5">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-5" hour-data="5" class="row hour-block">
+      <div class="col-md-1 hour">5AM</div>
+      <textarea data-task="5" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">6AM</h3>
-      <div class="col-9 event-box" hour-num="6">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-6" hour-data="6" class="row hour-block">
+      <div class="col-md-1 hour">6AM</div>
+      <textarea data-task="6" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">7AM</h3>
-      <div class="col-9 event-box" hour-num="7">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-7" hour-data="7" class="row hour-block">
+      <div class="col-md-1 hour">7AM</div>
+      <textarea data-task="14" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">8AM</h3>
-      <div class="col-9 event-box" hour-num="8">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-8" hour-data="8" class="row hour-block">
+      <div class="col-md-1 hour">8AM</div>
+      <textarea data-task="8" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">9AM</h3>
-      <div class="col-9 event-box" hour-num="9">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-9" hour-data="9" class="row hour-block">
+      <div class="col-md-1 hour">9AM</div>
+      <textarea data-task="9" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">10AM</h3>
-      <div class="col-9 event-box" hour-num="10">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-10" hour-data="10" class="row hour-block">
+      <div class="col-md-1 hour">10AM</div>
+      <textarea data-task="10" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">11AM</h3>
-      <div class="col-9 event-box" hour-num="11">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-11" hour-data="11" class="row hour-block">
+      <div class="col-md-1 hour">11AM</div>
+      <textarea data-task="11" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">12PM</h3>
-      <div class="col-9 event-box" hour-num="12">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-12" hour-data="12" class="row hour-block">
+      <div class="col-md-1 hour">12PM</div>
+      <textarea data-task="12" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">1PM</h3>
-      <div class="col-9 event-box" hour-num="13">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-13" hour-data="13" class="row hour-block">
+      <div class="col-md-1 hour">1PM</div>
+      <textarea data-task="13" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">2PM</h3>
-      <div class="col-9 event-box" hour-num="14">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-14" hour-data="14" class="row hour-block">
+      <div class="col-md-1 hour">2PM</div>
+      <textarea data-task="14" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">3PM</h3>
-      <div class="col-9 event-box" hour-num="15">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-15" hour-data="15" class="row hour-block">
+      <div class="col-md-1 hour">3PM</div>
+      <textarea data-task="15" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">4PM</h3>
-      <div class="col-9 event-box" hour-num="16">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-16" hour-data="16" class="row hour-block">
+      <div class="col-md-1 hour">4PM</div>
+      <textarea data-task="16" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">5PM</h3>
-      <div class="col-9 event-box" hour-num="17">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-17" hour-data="17" class="row hour-block">
+      <div class="col-md-1 hour">5PM</div>
+      <textarea data-task="17" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">6PM</h3>
-      <div class="col-9 event-box" hour-num="18">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-18" hour-data="18" class="row hour-block">
+      <div class="col-md-1 hour">6PM</div>
+      <textarea data-task="181" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">7PM</h3>
-      <div class="col-9 event-box" hour-num="19">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-19" hour-data="19" class="row hour-block">
+      <div class="col-md-1 hour">7PM</div>
+      <textarea data-task="19" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">8PM</h3>
-      <div class="col-9 event-box" hour-num="20">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-20" hour-data="20" class="row hour-block">
+      <div class="col-md-1 hour">8PM</div>
+      <textarea data-task="20" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">9PM</h3>
-      <div class="col-9 event-box" hour-num="21">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-21" hour-data="21" class="row hour-block">
+      <div class="col-md-1 hour">9PM</div>
+      <textarea data-task="21" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">10PM</h3>
-      <div class="col-9 event-box" hour-num="22">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-22" hour-data="22" class="row hour-block">
+      <div class="col-md-1 hour">10PM</div>
+      <textarea data-task="22" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">11PM</h3>
-      <div class="col-9 event-box" hour-num="23">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-23" hour-data="23" class="row hour-block">
+      <div class="col-md-1 hour">11PM</div>
+      <textarea data-task="23" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
-    <div class="row justify-content-center hour-block">
-      <h3 class="col-2 hour">12AM</h3>
-      <div class="col-9 event-box" hour-num="24">
-        <p class="event-text">ENTER YOUR EVENT HERE!</p>
-      </div>
-      <button class="saveBtn col-1" type="button"><i class="fa fa-folder"></i> Save</button>
+    <div id="hour-24" hour-data="24" class="row hour-block">
+      <div class="col-md-1 hour">12AM</div>
+      <textarea data-task="24" class="col-md-10 text-center description"></textarea>
+      <button class="btn saveBtn col-md-1"><i class="fa fa-folder"></i> Save</button>
     </div>
 
   </div>
