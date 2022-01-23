@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var schedule = ""
 
-    // gets the current time and displays it in the header
+    // uses moment to get the current time and displays it in the header
     var currentTime = function () {
         timeEL = document.querySelector('#currentDay')
         timeEL.innerHTML = moment().format('MMMM Do YYYY, hh:mm');
@@ -29,7 +29,7 @@ $(document).ready(function () {
     }
     setInterval(hourUpdater, 100)
 
-    //sets schedule items to local storage as hour and task keys
+    //uses description to set schedule item to local storage as hour and task key
     function saveSchedule() {
         schedule = []
         $('.description').each(function () {
@@ -67,5 +67,5 @@ $(document).ready(function () {
     hourUpdater()
     loadSchedule()
 
-    console.log("this document ready function ran start to finish!")
+    console.log("This document ready function ran start to finish!")
 });
